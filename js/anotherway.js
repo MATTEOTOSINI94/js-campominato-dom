@@ -12,8 +12,10 @@ btnSubmit.addEventListener("click", function() {
     //  funzione dove in base alla selct ci saranno un tot di quadrati cosa da fare con un if o anche un switch
     const livelliDifficolta = btnLevel.value
     // creo una costante con il valore di tale funzione
+    const numeroBombe = 16
     numeroTotaleCelleDaAggiungere = numerocelle(livelliDifficolta)
-
+    generaNumeriBombe(numeroBombe,numeroTotaleCelleDaAggiungere)
+    console.log("sono qui" + generaNumeriBombe(numeroBombe,numeroTotaleCelleDaAggiungere))
      
     gameContainer.innerHTML = "";
     const numeroColonne = Math.sqrt(numeroTotaleCelleDaAggiungere)
@@ -65,55 +67,3 @@ function cellonclick() {
   
 
 
-
-// // obiettivo ottenere array con 16 numeri unici  
-// // genera numeri bombe
-// function generaNumeriBombe(numeroBombe,numeroTotaleCelleDaAggiungere) {
-//     // genero array vuoto dove inserire numeri generati
-// const arrayBombe = []
-
-
-// // for (let x = 0; x < numeroBombe; x++) {
-//     while(arrayBombe.length < numeroBombe){
-//     // /invoco la funzione per genrare numeri random
-
-
-//     const numeriRandom = generateRandomNum(1, numeroTotaleCelleDaAggiungere)
-//      if (!arrayBombe.includes(numeriRandom) ) {
-//         arrayBombe.push(numeriRandom)
-//      }
-    
-
-    
-// }
-
-// // se un numero random si ripete devo crearne un'altro
-// // function includi(elementoIncluso,arrayI) {
-// //     for (let x = 0; x < array.length; x++) {
-// //        if (elementoIncluso === arrayI[x]) {
-// //            return true
-           
-// //        }
-        
-// //     }
-// //     return false
-// // }
-
-
-// console.log(arrayBombe)
-
-    
-// }
-
-
-// // creo esternamente una funzione per generare numeri random
-
-// function generateRandomNum(minNumber = 1, maxNumber) {
-
-//     const numRandom = Math.floor(Math.random() * (maxNumber - minNumber + 1) + minNumber);
-//     return numRandom;
-//   }
-
-
-
-//   generaNumeriBombe(16,100)
