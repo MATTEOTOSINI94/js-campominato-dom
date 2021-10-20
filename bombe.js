@@ -3,6 +3,7 @@
 // genera numeri bombe
 function generaNumeriBombe(numeroBombe,numeroTotaleCelleDaAggiungere) {
     // genero array vuoto dove inserire numeri generati
+    console.log("generaNumeriBombe")
 const arrayBombe = []
 
 
@@ -12,15 +13,18 @@ const arrayBombe = []
 
 
     const numeriRandom = generateRandomNum(1, numeroTotaleCelleDaAggiungere)
+
+    
      if (!arrayBombe.includes(numeriRandom) ) {
         arrayBombe.push(numeriRandom)
      }
     
+   
 
     
 }
 
-
+return arrayBombe
 
 console.log(arrayBombe)
 
